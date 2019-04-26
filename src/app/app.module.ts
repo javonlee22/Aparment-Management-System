@@ -9,7 +9,8 @@ import { FloorPlansComponent } from './components/floor-plans/floor-plans.compon
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AmenitiesComponent } from './components/amenities/amenities.component';
 import { AboutComponent } from './components/about/about.component'
-import { HomeComponent } from './components/home/home.component'
+import { HomeComponent } from './components/home/home.component';
+import { ListingComponent } from './components/listing/listing.component'
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HomeComponent } from './components/home/home.component'
     ContactUsComponent,
     AmenitiesComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    ListingComponent
   ],
   imports: [
     BrowserModule,
