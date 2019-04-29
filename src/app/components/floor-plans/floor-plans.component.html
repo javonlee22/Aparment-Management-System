@@ -1,3 +1,4 @@
-<p>
-  floor-plans works!
-</p>
+<div>
+  <h1 style="text-align: center; margin-top: 20px; margin-bottom:40px;"> Available Units</h1>
+  <app-listing *ngFor="let apt of apartments" [apartment]="apt"></app-listing>
+</div>

@@ -1,0 +1,13 @@
+
+<div class="container" style="margin-top:20px;">
+  <div class="row">
+    <img
+      src={{apartment.url}}
+      height="200"
+      width="275">
+      <h2 style="margin:20px;">{{apartment.title}}</h2>
+  </div>
+  <hr style="border-top: 2px solid black;">
+</div>
+<app-unit *ngFor="let unit of apartment.units" [_id]="unit"></app-unit>
+<!-- <div id="panel"> Test</div> -->
