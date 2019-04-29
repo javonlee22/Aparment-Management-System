@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { UnitComponent } from './components/floor-plans/components/unit/unit.com
 import { TenantDashboardComponent } from './components/tenant-dashboard/tenant-dashboard.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component'
+import { CookieService } from 'ngx-cookie-service'
 
 
 @NgModule({
@@ -38,9 +40,11 @@ import { AdminLoginComponent } from './components/admin-login/admin-login.compon
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
