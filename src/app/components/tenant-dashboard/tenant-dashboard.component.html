@@ -1,3 +1,31 @@
-<p>
-  tenant-dashboard works!
-</p>
+<div class="container" style="margin-top: 20px;">
+  <h1 style="text-align:center; margin-bottom:30px;">Welcome {{profile.first_name}} {{profile.last_name}}</h1>
+  <table>
+    <tr>
+      <td style="padding: 30px; vertical-align: top;">
+        <div class="balance-div">
+          <div class="balance-amt">
+            <h2 style="color: orangered;">Balance</h2>
+            <h3 style="color: orangered;">${{profile.balance ? profile.balance : 0}}</h3>
+          </div>
+          <div class="col-xs-12 button-wrapper">
+            <button class="btn balance-btn btn-success">Make Payment</button>
+            <button class="btn balance-btn btn-info">Submit Work Order</button>
+          </div>
+        </div>
+      </td>
+      <td style="vertical-align: top;">
+        <div class="work-orders">
+          <h2 style="text-align: center;">Work Orders</h2>
+        </div>
+      </td>
+      <td style="padding: 30px; vertical-align: top;">
+        <div class="unit-details">
+          <h2 style="text-align:center;">{{unit.building}}</h2>
+          <h3 style="text-align:center;">Unit {{unit.unit_number}}</h3>
+          <h4 style="text-align:center;">August 2019 - July 2020</h4>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

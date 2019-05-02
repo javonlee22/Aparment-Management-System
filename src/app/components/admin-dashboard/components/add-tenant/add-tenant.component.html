@@ -1,0 +1,53 @@
+<form class="d-flex justify-content-center align-items-center align-self-center"
+  [formGroup]="tenantForm">
+  <div class="form-group">
+    <h1 style="color:green;">Create New Tenant</h1>
+    <div>
+      <label for="first">First Name</label><br/>
+        <input type="text" placeholder="Enter First Name"
+          formControlName="first"
+          style="width: 400px; margin-bottom:15px;" id="first">
+      </div>
+      <div>
+        <label for="last">Last Name</label><br/>
+          <input type="text" placeholder="Enter Last Name"
+            formControlName="last" style="width: 400px; margin-bottom:15px;"
+            id="last">
+        </div>
+        <div>
+          <label for="email">Email Address</label><br/>
+            <input type="email" placeholder="Enter Email Address"
+              formControlName="email" style="width: 400px; margin-bottom:15px;"
+              id="email">
+          </div>
+          <div>
+            <label for="pwd">Password</label><br/>
+              <input type="password" placeholder="Enter Password"
+                formControlName="pwd" style="width: 400px;
+                margin-bottom:15px;"
+                id="pwd">
+            </div>
+            <div>
+              <label for="phone">Phone Number</label><br/>
+                <input type="tel" placeholder="Enter Phone Number"
+                  formControlName="phone" style="width: 400px;
+                  margin-bottom:15px;"
+                  id="phone">
+              </div>
+              <div>
+                <div>
+                  <label for="unit">Unit</label><br/>
+                    <select name="unit" id="unit" formControlName="unit">
+                      <optgroup *ngFor="let apt of apts" label={{apt.title}}>
+                        <option *ngFor="let unit of apt.units" value={{unit._id}}>{{unit.unit_number}}</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <div>
+                    <button class="btn btn-success" style="width: 400px;"
+                      id="btn"
+                      (click)="submit()">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </form>

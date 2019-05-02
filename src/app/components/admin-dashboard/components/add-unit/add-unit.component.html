@@ -1,0 +1,46 @@
+<form class="d-flex justify-content-center align-items-center align-self-center"
+  [formGroup]="unitForm">
+  <div class="form-group">
+    <h1 style="color:green;">Add Unit</h1>
+    <div>
+      <label for="beds">Bedrooms</label><br/>
+        <input type="number" placeholder="Enter Number of Bedrooms"
+          formControlName="beds"
+          style="width: 400px; margin-bottom:15px;" id="beds">
+      </div>
+      <div>
+        <label for="baths">Bathrooms</label><br/>
+          <input type="number" placeholder="Enter Number of Bathrooms"
+            formControlName="baths" style="width: 400px; margin-bottom:15px;"
+            id="baths">
+        </div>
+        <div>
+          <label for="sqft">Square Feet</label><br/>
+            <input type="number" placeholder="Enter Square Feet"
+              formControlName="sqft" style="width: 400px; margin-bottom:15px;"
+              id="sqft">
+          </div>
+          <div>
+            <label for="unitNum">Unit Number</label><br/>
+              <input type="text" placeholder="Enter Unit Number"
+                formControlName="unitNum" style="width: 400px;
+                margin-bottom:15px;"
+                id="unitNum">
+            </div>
+            <div>
+              <label for="apt">Apartment Building</label><br/>
+              <select class="selectpicker" name="apt" id="apt" formControlName="apt">
+                <option *ngFor="let apt of apts" value={{apt.title}}>{{apt.title}}</option>
+              </select>
+              <div>
+                <label for="url">Image URL</label><br/>
+                  <input type="text" placeholder="Enter Image URL"
+                    formControlName="url" style="width: 400px;
+                    margin-bottom:15px;"
+                    id="url">
+                </div>
+                <button class="btn btn-success" style="width: 400px;" id="btn"
+                  (click)="submit()">Submit</button>
+              </div>
+            </div>
+          </form>

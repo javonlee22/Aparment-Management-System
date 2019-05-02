@@ -9,6 +9,9 @@ import { HomeComponent } from './components/home/home.component'
 import { AdminLoginComponent } from './components/admin-login/admin-login.component'
 import { TenantDashboardComponent } from './components/tenant-dashboard/tenant-dashboard.component'
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { AddAptComponent } from './components/admin-dashboard/components/add-apt/add-apt.component';
+import { AddTenantComponent } from './components/admin-dashboard/components/add-tenant/add-tenant.component';
+import { AddUnitComponent } from './components/admin-dashboard/components/add-unit/add-unit.component';
 
 
 const routes: Routes = [
@@ -21,7 +24,10 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: 'home', component: HomeComponent },
   { path: 'admin', component: AdminLoginComponent},
-  { path: 'admin/dashboard' , component: AdminDashboardComponent }
+  { path: 'admin/dashboard' , component: AdminDashboardComponent },
+  { path: 'admin/dashboard/add-apt' , component: AddAptComponent },
+  { path: 'admin/dashboard/add-tenant' , component: AddTenantComponent },
+  { path: 'admin/dashboard/add-unit' , component: AddUnitComponent }
 ];
 
 @NgModule({

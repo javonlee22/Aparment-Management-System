@@ -17,7 +17,14 @@ import { UnitComponent } from './components/floor-plans/components/unit/unit.com
 import { TenantDashboardComponent } from './components/tenant-dashboard/tenant-dashboard.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { AdminLoginComponent } from './components/admin-login/admin-login.component'
-import { CookieService } from 'ngx-cookie-service'
+import { CookieService } from 'ngx-cookie-service';
+import { TenantComponent } from './components/admin-dashboard/components/tenant/tenant.component';
+import { ApartmentComponent } from './components/admin-dashboard/components/apartment/apartment.component';
+import { WorkOrderComponent } from './components/admin-dashboard/components/work-order/work-order.component';
+import { AddAptComponent } from './components/admin-dashboard/components/add-apt/add-apt.component';
+import { AddUnitComponent } from './components/admin-dashboard/components/add-unit/add-unit.component';
+import { AddTenantComponent } from './components/admin-dashboard/components/add-tenant/add-tenant.component';
+
 
 
 @NgModule({
@@ -35,15 +42,23 @@ import { CookieService } from 'ngx-cookie-service'
     UnitComponent,
     TenantDashboardComponent,
     AdminDashboardComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    TenantComponent,
+    ApartmentComponent,
+    WorkOrderComponent,
+    AddAptComponent,
+    AddUnitComponent,
+    AddTenantComponent,
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
+  entryComponents: [],
   providers: [CookieService],
   bootstrap: [AppComponent]
 })

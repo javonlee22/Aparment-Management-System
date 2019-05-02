@@ -1,0 +1,46 @@
+<form class="d-flex justify-content-center align-items-center align-self-center"
+  [formGroup]="aptForm">
+  <div class="form-group">
+    <h1 style="color:green;">Add Apartment</h1>
+    <div>
+      <label for="title">Title</label><br/>
+        <input type="text" placeholder="Enter Title" formControlName="title"
+          style="width: 400px; margin-bottom:15px;" id="title">
+      </div>
+      <div>
+        <label for="address">Address</label><br/>
+          <input type="text" placeholder="Enter Address"
+            formControlName="address" style="width: 400px; margin-bottom:15px;"
+            id="address">
+        </div>
+        <div>
+          <label for="city">City</label><br/>
+            <input type="text" placeholder="Enter City"
+              formControlName="city" style="width: 400px; margin-bottom:15px;"
+              id="city">
+          </div>
+          <div>
+            <label for="state">State</label><br/>
+              <input type="text" placeholder="Enter State"
+                formControlName="state" style="width: 400px;
+                margin-bottom:15px;"
+                id="state">
+            </div>
+            <div>
+              <label for="zip">Zip Code</label><br/>
+                <input type="text" placeholder="Enter Zip Code"
+                  formControlName="zip" style="width: 400px;
+                  margin-bottom:15px;"
+                  id="zip">
+              </div>
+              <div>
+                <label for="url">Image URL</label><br/>
+                  <input type="text" placeholder="Enter Image URL"
+                    formControlName="url" style="width: 400px;
+                    margin-bottom:15px;"
+                    id="url">
+                </div>
+                <button class="btn btn-success" style="width: 400px;" id="btn"
+                  (click)="submit()">Submit</button>
+              </div>
+            </form>
